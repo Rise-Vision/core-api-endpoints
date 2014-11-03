@@ -19,7 +19,7 @@
 package com.appspot.rvaserver2.rise.model;
 
 /**
- * Model definition for NewAccountResponse.
+ * Model definition for AccessVerificationWrapper.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Rise Core API (for internal use only). For a detailed
@@ -30,58 +30,79 @@ package com.appspot.rvaserver2.rise.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class NewAccountResponse extends com.google.api.client.json.GenericJson {
+public final class AccessVerificationWrapper extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CompanyWrapper company;
+  private java.lang.Boolean allowedAccess;
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private UserWrapper user;
+  private java.lang.String companyId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorMessage;
 
   /**
    * @return value or {@code null} for none
    */
-  public CompanyWrapper getCompany() {
-    return company;
+  public java.lang.Boolean getAllowedAccess() {
+    return allowedAccess;
   }
 
   /**
-   * @param company company or {@code null} for none
+   * @param allowedAccess allowedAccess or {@code null} for none
    */
-  public NewAccountResponse setCompany(CompanyWrapper company) {
-    this.company = company;
+  public AccessVerificationWrapper setAllowedAccess(java.lang.Boolean allowedAccess) {
+    this.allowedAccess = allowedAccess;
     return this;
   }
 
   /**
    * @return value or {@code null} for none
    */
-  public UserWrapper getUser() {
-    return user;
+  public java.lang.String getCompanyId() {
+    return companyId;
   }
 
   /**
-   * @param user user or {@code null} for none
+   * @param companyId companyId or {@code null} for none
    */
-  public NewAccountResponse setUser(UserWrapper user) {
-    this.user = user;
+  public AccessVerificationWrapper setCompanyId(java.lang.String companyId) {
+    this.companyId = companyId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
+  }
+
+  /**
+   * @param errorMessage errorMessage or {@code null} for none
+   */
+  public AccessVerificationWrapper setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
     return this;
   }
 
   @Override
-  public NewAccountResponse set(String fieldName, Object value) {
-    return (NewAccountResponse) super.set(fieldName, value);
+  public AccessVerificationWrapper set(String fieldName, Object value) {
+    return (AccessVerificationWrapper) super.set(fieldName, value);
   }
 
   @Override
-  public NewAccountResponse clone() {
-    return (NewAccountResponse) super.clone();
+  public AccessVerificationWrapper clone() {
+    return (AccessVerificationWrapper) super.clone();
   }
 
 }
