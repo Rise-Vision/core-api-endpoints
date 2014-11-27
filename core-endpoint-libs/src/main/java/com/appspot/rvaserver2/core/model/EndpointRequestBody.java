@@ -19,7 +19,7 @@
 package com.appspot.rvaserver2.core.model;
 
 /**
- * Model definition for CountryWrapper.
+ * Model definition for EndpointRequestBody.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Rise Core API. For a detailed explanation see:
@@ -29,79 +29,37 @@ package com.appspot.rvaserver2.core.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CountryWrapper extends com.google.api.client.json.GenericJson {
+public final class EndpointRequestBody extends com.google.api.client.json.GenericJson {
 
   /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String code;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<StateProvinceWrapper> states;
+  private JsonMap data;
 
   /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getCode() {
-    return code;
+  public JsonMap getData() {
+    return data;
   }
 
   /**
-   * @param code code or {@code null} for none
+   * @param data data or {@code null} for none
    */
-  public CountryWrapper setCode(java.lang.String code) {
-    this.code = code;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * @param name name or {@code null} for none
-   */
-  public CountryWrapper setName(java.lang.String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.util.List<StateProvinceWrapper> getStates() {
-    return states;
-  }
-
-  /**
-   * @param states states or {@code null} for none
-   */
-  public CountryWrapper setStates(java.util.List<StateProvinceWrapper> states) {
-    this.states = states;
+  public EndpointRequestBody setData(JsonMap data) {
+    this.data = data;
     return this;
   }
 
   @Override
-  public CountryWrapper set(String fieldName, Object value) {
-    return (CountryWrapper) super.set(fieldName, value);
+  public EndpointRequestBody set(String fieldName, Object value) {
+    return (EndpointRequestBody) super.set(fieldName, value);
   }
 
   @Override
-  public CountryWrapper clone() {
-    return (CountryWrapper) super.clone();
+  public EndpointRequestBody clone() {
+    return (EndpointRequestBody) super.clone();
   }
 
 }
